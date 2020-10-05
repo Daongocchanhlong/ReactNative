@@ -1,7 +1,4 @@
 import ScreenWelcome from './ScreenWelcome'
-import ScreenExam from './ScreenExam';
+import ScreenHome from './ScreenHome';
 
-export{
-    ScreenExam,
-    ScreenWelcome
-}
+export {ScreenHome, ScreenWelcome};

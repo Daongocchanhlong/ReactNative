@@ -19,23 +19,23 @@ export default class ScreenWelcome extends Component {
     };
   }
 
-  async performTimeConsumingTask() {
+  performTimeConsumingTask = async () => {
     return new Promise((resolve) =>
       setTimeout(() => {
         resolve('result');
-      }, 3000),
+      }, 2000),
     );
-  }
+  };
 
   async componentDidMount() {
     const data = await this.performTimeConsumingTask();
     if (data !== null) {
-      this.setState({isLoading: false});
+      this.setState({ isLoading: false });
     }
   }
 
   render() {
-    if (!this.state.isLoading) return <Screen.ScreenExam />;
+    if (!this.state.isLoading) return <Screen.ScreenHome />;
     else
       return (
         <View style={styles.contain}>

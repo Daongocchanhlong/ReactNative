@@ -1,2 +1,2 @@
 export const WELCOME_SCREEN = "Welcome";
-export const EXAM_SCREEN = 'Exam';
+export const HOME_SCREEN = 'Home';
