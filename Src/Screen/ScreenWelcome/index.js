@@ -3,24 +3,49 @@ import {
   View,
   Text,
   Image,
-  Animated 
 } from 'react-native'
 
 import styles from './style'
-import * as ScreenNames from '../../Define/ScreenName'
+import * as Animate from '../../Component/Animate/Animate'
+import * as Screen from '../screens'
+
 import logo from '../../Asset/Image/logo.png'
 
-export default class ScreenWelcome extends Component{
-  render(){
-    return (
-      <View style={styles.contain}>
-      </View>
+export default class ScreenWelcome extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true,
+    };
+  }
+
+  async performTimeConsumingTask() {
+    return new Promise((resolve) =>
+      setTimeout(() => {
+        resolve('result');
+      }, 3000),
     );
   }
+
+  async componentDidMount() {
+    const data = await this.performTimeConsumingTask();
+    if (data !== null) {
+      this.setState({isLoading: false});
+    }
+  }
+
+  render() {
+    if (!this.state.isLoading) return <Screen.ScreenExam />;
+    else
+      return (
+        <View style={styles.contain}>
+          <Animate.LogoAnimate>
+            <Image source={logo} style={styles.containLogo} />
+          </Animate.LogoAnimate>
+          <Animate.MoveAni>
+            <Text style={styles.containText}>Welcome !!</Text>
+          </Animate.MoveAni>
+        </View>
+      );
+  }
 }
-
-// function mapStateToProps(state){
-//     return {isLoading: state.isLoading}
-// }
-
-// export default connect(mapStateToProps)(ScreenWelcome);
