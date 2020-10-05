@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {View, Text, Animated, TouchableHighlight,Alert} from 'react-native';
 import styles from './style';
-
+import * as ScreenNames from '../../Define/ScreenName'
 export default class ScreenHome extends Component {
   constructor(props) {
     super(props);
@@ -46,11 +46,10 @@ export default class ScreenHome extends Component {
     });
     return (
       <View style={styles.contain}>
-      
         <Animated.View
           style={[styles.containBox, {transform: [{scale: scale1}]}]}>
           <TouchableHighlight
-            onPress={() => Alert.alert('Simple Button pressed')}>
+            onPress={() => this.props.navigation.navigate(ScreenNames.LIST_SCREEN)}>
             <Text style={styles.containText}>Danh sách</Text>
           </TouchableHighlight>
         </Animated.View>

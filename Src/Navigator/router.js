@@ -20,10 +20,10 @@ export default class Router extends Component {
                 name={ScreenNames.WELCOME_SCREEN}
                 component={Screens.ScreenWelcome}
               />
-              {/* <Stack.Screen
-                name={ScreenNames.HOME_SCREEN}
-                component={Screens.ScreenExam}
-              /> */}
+              <Stack.Screen
+                name={ScreenNames.LIST_SCREEN}
+                component={Screens.ScreenList}
+              />
             </Stack.Navigator>
           </NavigationContainer>
         );

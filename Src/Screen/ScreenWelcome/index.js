@@ -35,7 +35,7 @@ export default class ScreenWelcome extends Component {
   }
 
   render() {
-    if (!this.state.isLoading) return <Screen.ScreenHome />;
+    if (!this.state.isLoading) return <Screen.ScreenHome navigation={this.props.navigation}/>;
     else
       return (
         <View style={styles.contain}>
