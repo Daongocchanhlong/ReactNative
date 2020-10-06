@@ -3,21 +3,28 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   contain: {
     flex: 1,
-    backgroundColor: '#F6CEEC',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#404E5A',
   },
-  containLogo: {
-    width: 150,
-    height: 150,
-    resizeMode: 'center',
-  },
-  containText: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    color: '#000000',
-    margin: 10,
+  logo: {
+    margin: 50,
     padding: 10,
+    alignSelf: 'center',
+  },
+  containOptionMenu: {
+    height: 400,
+    marginTop: 50,
+    padding: 10,
+  },
+  containOptionItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+  },
+  textItem: {
+    fontSize: 30,
+    fontWeight: '700',
+    color: '#FFFFFF',
+    marginTop: 30,
+    marginLeft: 20,
   },
 });
 

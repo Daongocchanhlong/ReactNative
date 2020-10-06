@@ -11,20 +11,21 @@ import * as ScreenNames from '../../Define/ScreenName';
 export default class ScreenList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoading: true,
-    };
   }
 
   render() {
       return (
         <View style={styles.contain}>
-          <TouchableHighlight
-            onPress={() =>
-              this.props.navigation.navigate(ScreenNames.WELCOME_SCREEN)
-            }>
-            <Text style={{fontSize: 30}}>click me</Text>
-          </TouchableHighlight>
+          <View style={styles.containItem}>
+            <View style={styles.containNamePhone}>
+              <Text style={styles.text}>Đào Ngọc Chánh Long</Text>
+              <Text style={styles.text}>0779411697</Text>
+            </View>
+            <View style={styles.containNamePhone}>
+              <Text style={styles.text}>Tâm Hải</Text>
+              <Text style={styles.text}>k33/09 Bàu trảng 1</Text>
+            </View>
+          </View>
         </View>
       );
   }
