@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native'
-
+import * as Color from '../../Define/Color'
 const styles = StyleSheet.create({
   contain: {
     flex: 1,
-    backgroundColor: '#404E5A',
+    backgroundColor: Color.BGR_COLOR,
   },
   logo: {
     margin: 50,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   textItem: {
     fontSize: 30,
     fontWeight: '700',
-    color: '#FFFFFF',
+    color: Color.TEXT_COLOR,
     marginTop: 30,
     marginLeft: 20,
   },

@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native'
-
+import * as Color from '../../Define/Color'
 const styles = StyleSheet.create({
   contain: {
-    backgroundColor: '#404E5A',
+    backgroundColor: Color.BGR_COLOR,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

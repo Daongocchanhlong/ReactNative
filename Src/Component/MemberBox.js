@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-
-export default class Element extends Component {
+import {StyleSheet} from 'react-native';
+import * as Color from '../Define/Color'
+export default class MemberBox extends Component {
   constructor(props) {
     super(props);
   }
@@ -23,17 +24,15 @@ export default class Element extends Component {
     );
   }
 }
-import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   contain: {
     flex: 1,
-    backgroundColor: '#F6CEEC',
   },
   containItem: {
     margin: 10,
     padding: 10,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Color.ITEM_COLOR,
     borderRadius: 10,
   },
   containNamePhone: {
@@ -43,5 +42,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
+    fontWeight:'700'
   },
 });
